@@ -1,0 +1,13 @@
+.card {
+    height : 200px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: azure;
+    font-weight: 600;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin : 20px;
+    padding : 20px;
+}

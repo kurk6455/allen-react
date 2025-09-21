@@ -1,0 +1,25 @@
+.icon {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    margin : 5px;
+    padding : 5px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navTab {
+    text-decoration: none;
+    color: black;
+    margin : 5px;
+    padding : 5px;
+}
+
+.navTab:hover {
+    cursor : pointer;
+    color: red;
+}
