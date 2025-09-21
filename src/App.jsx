@@ -1,7 +1,9 @@
-import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
-import { Exam } from './Pages/Exam.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Layout } from './Layout.jsx';
+import { Home } from './Pages/Home.jsx';
+import { Exams } from './Pages/Exams.jsx';
 import { Programs } from './Pages/Programs.jsx';
-import { StudyMaterial } from './Pages/StudyMaterial.jsx';
+import { StudyMaterials } from './Pages/StudyMaterials.jsx';
 import { PageNotFound } from './Pages/PageNotFound.jsx';
 
 
@@ -9,30 +11,17 @@ function App() {
 
   return (
     <>
-
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="Exam" element={<Exam />} />
+            <Route index element={<Home />} />
+            <Route path="Exams" element={<Exams />} />
             <Route path="Programs" element={<Programs />} />
-            <Route path="StudyMaterial" element={<StudyMaterial />} />
+            <Route path="StudyMaterials" element={<StudyMaterials />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
-  )
-}
-
-
-function Layout() {
-
-  return (
-    <>
-      <span>ALLEN - </span>
-      <Link to="/Exam">Exam</Link> | <Link to="/Programs">Programs</Link> |<Link to="/StudyMaterial">StudyMaterial</Link>
-      <Outlet />
-      <div> FOOTER </div>
     </>
   )
 }
